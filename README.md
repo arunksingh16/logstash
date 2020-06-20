@@ -5,6 +5,9 @@ Logstash is an open source data collection engine with real-time pipelining capa
   - install and configure filebeat 
   - update logstash to receive input from filebeat
   - Magic
+  
+> Every configuration file is split into 3 sections, input, filter and output. They’re the 3 stages of most if not all ETL processes.
+> 
 
 # filebeat
 ```
@@ -21,4 +24,8 @@ sudo apt install apache2
 > updated the files as per blog https://medium.com/@arunksingh16/deploying-elk-stack-for-apache-logs-analysis-283d0b222c24
 
 
-### Tech
+### Logstash Config can be managed via values.yaml or using configmaps
+
+```
+kubectl create configmap apache-pipeline --from-file apache-es.conf
+```
