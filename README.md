@@ -26,6 +26,11 @@ sudo apt install apache2
 
 > updated the files as per blog https://medium.com/@arunksingh16/deploying-elk-stack-for-apache-logs-analysis-283d0b222c24
 
+# accessing elastic
+
+```
+kubectl port-forward svc/elasticsearch 9200
+```
 
 ### Logstash Config can be managed via values.yaml or using configmaps
 
