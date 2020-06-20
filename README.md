@@ -13,6 +13,9 @@ Logstash is an open source data collection engine with real-time pipelining capa
 ```
 curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.8.0-linux-x86_64.tar.gz
 tar xzvf filebeat-7.8.0-linux-x86_64.tar.gz
+# running filebeat
+sudo ./filebeat -e -c filebeat.yml -d "publish" -strict.perms=false
+
 ```
 # apache
 
