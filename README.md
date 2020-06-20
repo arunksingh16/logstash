@@ -37,3 +37,13 @@ kubectl port-forward svc/elasticsearch 9200
 ```
 kubectl create configmap apache-pipeline --from-file apache-es.conf
 ```
+
+
+
+### Install released version using Helm repository
+
+* Add the Elastic Helm charts repo:
+`helm repo add elastic https://helm.elastic.co`
+
+* Install it: `helm install --name logstash elastic/logstash -f values.yaml`
+
